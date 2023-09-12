@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="poc_autodiscoveryprojFlow" doc:id="5765e6c7-a16b-4bb9-8949-d4b86201795a" >
 		<http:listener doc:name="Listener" doc:id="7c228eed-8ab3-47c7-bf7f-e28f4ed9ed3d" config-ref="HTTP_Listener_config" path="/auto"/>
+		<logger level="INFO" doc:name="Logger" doc:id="85edbbcc-d08a-409b-8bf5-8a4dd8076d5c" message="new logger for demo porpose"/>
 		<ee:transform doc:name="Transform Message" doc:id="5c9289de-d969-4960-93ce-27fde314fb4d" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
